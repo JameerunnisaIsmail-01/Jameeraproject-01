@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Report System</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Floating background circles */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    animation: float 6s infinite ease-in-out;
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+}
+
+body::after {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 10%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Glass card */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    animation: fadeIn 1.5s ease;
+    max-width: 500px;
+}
+
+/* Text styles */
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ddd;
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Digital Medical Report Management System</h1>
+    
+    <h2>Team Name:NADIYA MEDX</h2>
+    
+    <h3>
+        Presented By:<br>
+        • SK.JAMEERUNNISA<br>
+        • S.REETHU KUMARI<br>
+        • P.AKASH
+    </h3>
+
+    <button onclick="startProject()">🚀 View Presentation</button>
+
+    <div class="footer">
+        Guided By: Mr.P.TEJABABU
+    </div>
+</div>
+
+<script>
+function startProject() {
+    window.location.href = "login.html"; // 🔁 Change this to your main page
+}
+</script>
+
+</body>
+</html>
