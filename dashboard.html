@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body style="background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTilViDFdYbcu8CrYEXhMU_7nr1DpQfzevXIQ&s') no-repeat center center/cover;">>
+    <h2>Your Medical Reports</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h3>Uploaded Reports:</h3>
+    <ul>
+        {% for report in reports %}
+            <li>
+                <a href="/uploads/{{ report[0] }}" target="_blank">
+                    {{ report[0] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/logout">Logout</a>
+</body>
+</html>
